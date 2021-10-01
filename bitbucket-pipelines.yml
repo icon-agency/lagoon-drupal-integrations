@@ -2,8 +2,8 @@ options:
   docker: true
 
 pipelines:
-  branches:
-    9.x:
+  tags:
+    9.*:
       - step:
           name: Trigger Drupal build
           script:
