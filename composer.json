@@ -1,7 +1,7 @@
 {
   "name": "iconagency/lagoon_drupal_integrations",
   "description": "Icon Agency Lagoon Integrations.",
-  "type": "drupal-drush",
+  "type": "metapackage",
   "license": "MIT",
   "require": {
     "php": ">=7.3",
