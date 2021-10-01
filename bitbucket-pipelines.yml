@@ -14,6 +14,5 @@ pipelines:
                 BRANCH_NAME: "9.x"
                 ACCOUNT: "iconagency"
                 REPOSITORY: "lagoon-drupal"
-                WAIT: "true"
           caches:
             - docker
