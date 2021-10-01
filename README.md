@@ -4,7 +4,7 @@ Metapackage to support integration with Amazee Lagoon.
 
 ## Usage
 
-This is just a metapackage that installs some extra bits required for Lagoon. Pleas read the AmazeeIO Drupal Integrations README for more information.
+This is just a metapackage that installs some extra bits required for Lagoon. Please read the AmazeeIO Drupal Integrations README for more information.
 
 https://github.com/amazeeio/drupal-integrations
 
