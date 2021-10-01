@@ -14,6 +14,11 @@
     "drush/drush": "^10.6.0"
   },
   "extra": {
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "amazeeio/drupal_integrations"
+      ]
+    },
     "patches": {
       "drupal/fastly": {
         "https://www.drupal.org/project/fastly/issues/2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff"
