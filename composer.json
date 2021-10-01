@@ -3,6 +3,12 @@
   "description": "Icon Agency Lagoon Integrations.",
   "type": "metapackage",
   "license": "MIT",
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
   "require": {
     "php": ">=7.3",
     "amazeeio/drupal_integrations": "^0.3.6",
