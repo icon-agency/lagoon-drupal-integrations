@@ -28,5 +28,10 @@
         "https://www.drupal.org/project/fastly/issues/2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff"
       }
     }
+  },
+  "suggest": {
+    "amazeeio/drupal_integrations": "Integrate with Lagoon",
+    "oomphinc/composer-installers-extender": "Install extra packages such as npm",
+    "cweagans/composer-patches": "Patch up files"
   }
 }
