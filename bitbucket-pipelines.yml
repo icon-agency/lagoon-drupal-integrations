@@ -1,0 +1,19 @@
+options:
+  docker: true
+
+pipelines:
+  branches:
+    9.x:
+      - step:
+          name: Trigger Drupal build
+          script:
+            - pipe: atlassian/trigger-pipeline:4.2.1
+              variables:
+                BITBUCKET_USERNAME: $PIPELINES_TRIGGER_USER
+                BITBUCKET_APP_PASSWORD: $PIPELINES_TRIGGER_PASS
+                BRANCH_NAME: "9.x"
+                ACCOUNT: "iconagency"
+                REPOSITORY: "lagoon-drupal"
+                WAIT: "true"
+          caches:
+            - docker
