@@ -1,6 +1,6 @@
 {
-  "name": "iconagency/lagoon-drupal",
-  "description": "Icon Agency Lagoon Integrations. Opinionated.",
+  "name": "iconagency/drupal_integrations",
+  "description": "Opinionated Icon Agency Lagoon Integrations.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -21,12 +21,7 @@
     "drupal/lagoon_logs": "^1.1.0",
     "drupal/purge": "^3.1",
     "drupal/stage_file_proxy": "^1.1",
-    "drush/drush": "^10.6.0",
-    "drupal/core-composer-scaffold": "*"
-  },
-  "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-    "drupal/core-dev": "^9.2.6"
+    "drush/drush": "^10.6.0"
   },
   "extra": {
     "patches": {
@@ -43,20 +38,21 @@
           "path": "assets/.vscode/settings.json",
           "overwrite": false
         },
-        "[project-root]/drush/drush.yml": {
-          "mode": "replace",
-          "path": "assets/drush/drush.yml",
-          "overwrite": false
-        },
+        "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
         "[project-root]/.ahoy.yml": "assets/.ahoy.yml",
-        "[project-root]/phpcs.xml": "assets/phpcs.xml",
+        "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
         "[project-root]/renovate.json": "assets/renovate.json",
-        "[project-root]/config/sync/.gitkeep": "assets/config/dev/.gitkeep",
+        "[project-root]/config/sync/.gitkeep": "assets/config/sync/.gitkeep",
         "[project-root]/config/dev/README.md": "assets/config/dev/README.md",
         "[project-root]/assets/README.md": "assets/assets/README.md",
         "[project-root]/README.md": {
           "mode": "replace",
           "path": "assets/README.md",
+          "overwrite": false
+        },
+        "[project-root]/.nvmrc": {
+          "mode": "replace",
+          "path": "assets/.nvmrc",
           "overwrite": false
         }
       }
