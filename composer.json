@@ -28,12 +28,6 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
     "drupal/core-dev": "^9.2.6"
   },
-  "scripts": {
-    "pre-drupal-scaffold-cmd": [
-      "mkdir -p config/sync",
-      "mkdir -p config/dev"
-    ]
-  },
   "extra": {
     "patches": {
       "drupal/fastly": {
@@ -52,6 +46,7 @@
         "[project-root]/.ahoy.yml": "assets/.ahoy.yml",
         "[project-root]/phpcs.xml": "assets/phpcs.xml",
         "[project-root]/renovate.json": "assets/renovate.json",
+        "[project-root]/config/sync/.gitkeep": "assets/config/sync/.gitkeep",
         "[project-root]/config/dev/README.md": "assets/config/dev/README.md",
         "[project-root]/assets/README.md": "assets/assets/README.md",
         "[project-root]/README.md": {
