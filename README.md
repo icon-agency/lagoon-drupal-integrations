@@ -2,6 +2,8 @@
 
 Metapackage to support integration with Amazee Lagoon.
 
+Opinionated installs that overwrite upstream projects.
+
 ## Usage
 
 This is just a metapackage that installs some extra bits required for Lagoon. Please read the AmazeeIO Drupal Integrations README for more information.

@@ -1,0 +1,36 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["composer", "dockerfile", "docker-compose"],
+  "dockerfile": {
+    "fileMatch": ["^lagoon/.*\\.dockerfile$"]
+  },
+  "dependencyDashboard": true,
+  "pinVersions": false,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["patch", "minor"],
+      "packageNames": [
+        "drupal/core-dev",
+        "drupal/core-recommended",
+        "drupal/core-composer-scaffold",
+        "drupal/core-project-message",
+        "drupal/core-vendor-hardening"
+      ],
+      "groupName": "Drupal Core"
+    },
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["major"],
+      "packageNames": [
+        "drupal/core-dev",
+        "drupal/core-recommended",
+        "drupal/core-composer-scaffold",
+        "drupal/core-project-message",
+        "drupal/core-vendor-hardening"
+      ],
+      "enabled": false
+    }
+  ]
+}

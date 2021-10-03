@@ -1,6 +1,6 @@
 {
   "name": "iconagency/lagoon-drupal",
-  "description": "Icon Agency Lagoon Integrations.",
+  "description": "Icon Agency Lagoon Integrations. Opinionated.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -24,6 +24,10 @@
     "drush/drush": "^10.6.0",
     "drupal/core-composer-scaffold": "*"
   },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "drupal/core-dev": "^9.2.6"
+  },
   "scripts": {
     "pre-drupal-scaffold-cmd": [
       "mkdir -p config/sync",
@@ -46,7 +50,10 @@
         },
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
         "[project-root]/.ahoy.yml": "assets/.ahoy.yml",
+        "[project-root]/phpcs.xml": "assets/phpcs.xml",
+        "[project-root]/renovate.json": "assets/renovate.json",
         "[project-root]/config/dev/README.md": "assets/config/dev/README.md",
+        "[project-root]/assets/README.md": "assets/assets/README.md",
         "[project-root]/README.md": {
           "mode": "replace",
           "path": "assets/README.md",
