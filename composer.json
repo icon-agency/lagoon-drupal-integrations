@@ -1,7 +1,7 @@
 {
   "name": "iconagency/lagoon-drupal",
   "description": "Icon Agency Lagoon Integrations.",
-  "type": "metapackage",
+  "type": "library",
   "license": "MIT",
   "authors": [
     {
@@ -21,12 +21,37 @@
     "drupal/lagoon_logs": "^1.1.0",
     "drupal/purge": "^3.1",
     "drupal/stage_file_proxy": "^1.1",
-    "drush/drush": "^10.6.0"
+    "drush/drush": "^10.6.0",
+    "drupal/core-composer-scaffold": "*"
+  },
+  "scripts": {
+    "pre-drupal-scaffold-cmd": [
+      "mkdir -p config/sync",
+      "mkdir -p config/dev"
+    ]
   },
   "extra": {
     "patches": {
       "drupal/fastly": {
         "https://www.drupal.org/project/fastly/issues/2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff"
+      }
+    },
+    "drupal-scaffold": {
+      "file-mapping": {
+        "[project-root]/.vscode/extensions.json": "assets/.vscode/extensions.json",
+        "[project-root]/.vscode/settings.json": {
+          "mode": "replace",
+          "path": "assets/.vscode/settings.json",
+          "overwrite": false
+        },
+        "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
+        "[project-root]/.ahoy.yml": "assets/.ahoy.yml",
+        "[project-root]/config/dev/README.md": "assets/config/dev/README.md",
+        "[project-root]/README.md": {
+          "mode": "replace",
+          "path": "assets/README.md",
+          "overwrite": false
+        }
       }
     }
   },

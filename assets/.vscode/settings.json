@@ -1,0 +1,44 @@
+{
+  "php.validate.enable": false,
+  "php-docblocker.qualifyClassNames": true,
+  "php-docblocker.returnGap": true,
+  "php-docblocker.useShortNames": true,
+  "[php]": {
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "wongjn.php-sniffer"
+  },
+  "typescript.validate.enable": false,
+  "files.associations": {
+    "*.module": "php",
+    "*.inc": "php",
+    "*.theme": "php",
+    "*.install": "php",
+    "*.vue": "vue"
+  },
+  "emmet.includeLanguages": {
+    "twig": "html"
+  },
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.rulers": [80, 120],
+  "eslint.validate": ["javascript", "vue", "vue-html", "html"],
+  "html.format.indentHandlebars": false,
+  "html.format.indentInnerHtml": true,
+  "html.format.preserveNewLines": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true
+}
