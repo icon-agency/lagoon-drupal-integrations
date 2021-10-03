@@ -35,6 +35,7 @@
       }
     },
     "drupal-scaffold": {
+      "gitignore": false,
       "file-mapping": {
         "[project-root]/.vscode/extensions.json": "assets/.vscode/extensions.json",
         "[project-root]/.vscode/settings.json": {
@@ -42,11 +43,15 @@
           "path": "assets/.vscode/settings.json",
           "overwrite": false
         },
-        "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
+        "[project-root]/drush/drush.yml": {
+          "mode": "replace",
+          "path": "assets/drush/drush.yml",
+          "overwrite": false
+        },
         "[project-root]/.ahoy.yml": "assets/.ahoy.yml",
         "[project-root]/phpcs.xml": "assets/phpcs.xml",
         "[project-root]/renovate.json": "assets/renovate.json",
-        "[project-root]/config/sync/.gitkeep": "assets/config/sync/.gitkeep",
+        "[project-root]/config/sync/.gitkeep": "assets/config/dev/.gitkeep",
         "[project-root]/config/dev/README.md": "assets/config/dev/README.md",
         "[project-root]/assets/README.md": "assets/assets/README.md",
         "[project-root]/README.md": {
