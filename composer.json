@@ -39,10 +39,22 @@
         },
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
         "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
-        "[project-root]/.renovaterc": "assets/.renovaterc",
-        "[project-root]/config/sync/.gitkeep": "assets/config/sync/.gitkeep",
-        "[project-root]/config/dev/README.md": "assets/config/dev/README.md",
-        "[project-root]/assets/README.md": "assets/assets/README.md",
+        "[project-root]/renovate.json": "assets/renovate.json",
+        "[project-root]/config/sync/.gitkeep": {
+          "mode": "replace",
+          "path": "assets/config/sync/.gitkeep",
+          "overwrite": false
+        },
+        "[project-root]/config/dev/README.md": {
+          "mode": "replace",
+          "path": "assets/config/dev/README.md",
+          "overwrite": false
+        },
+        "[project-root]/assets/README.md": {
+          "mmore": "replace",
+          "path": "assets/assets/README.md",
+          "overwrite": false
+        },
         "[project-root]/README.md": {
           "mode": "replace",
           "path": "assets/README.md",
