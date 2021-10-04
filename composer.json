@@ -18,6 +18,7 @@
   "require": {
     "cweagans/composer-patches": "^1.7.1",
     "drupal/core-composer-scaffold": "^9.2",
+    "drupal/core-recommended": "^9.2",
     "drupal/core-vendor-hardening": "^9.2",
     "drupal/fastly": "3.14",
     "drupal/http_cache_control": "^2.0",
@@ -65,7 +66,8 @@
     }
   },
   "suggest": {
-    "amazeeio/drupal_integrations": "Integrate with Lagoon",
-    "oomphinc/composer-installers-extender": "Install extra packages such as npm"
+    "composer/installers": "^1.12 || ^2.0",
+    "amazeeio/drupal_integrations": "^0.3.6",
+    "oomphinc/composer-installers-extender": "^2.0"
   }
 }
