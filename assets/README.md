@@ -13,6 +13,10 @@
 
 ## FAQ
 
+### Install dev deps for frontend
+
+`npm i --prefix web/core`
+
 ### How do I override Lando?
 
 Create .lando.yml file
