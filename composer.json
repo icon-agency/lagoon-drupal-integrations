@@ -17,10 +17,8 @@
   },
   "require": {
     "cweagans/composer-patches": "^1.7.1",
-    "drupal/core-recommended": "^9.2",
     "drupal/core-composer-scaffold": "^9.2",
     "drupal/core-vendor-hardening": "^9.2",
-    "drupal/environment_indicator": "^4.0.3",
     "drupal/fastly": "3.14",
     "drupal/http_cache_control": "^2.0",
     "drupal/lagoon_logs": "^1.1.0",
