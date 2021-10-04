@@ -24,6 +24,11 @@
     "drupal/stage_file_proxy": "^1.1",
     "drush/drush": "^10.6.0"
   },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
   "extra": {
     "patches": {
       "drupal/fastly": {
