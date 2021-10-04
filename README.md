@@ -14,7 +14,6 @@ Opinionated config and structure for development. Recommended base modules and p
   "extra": {
     "enable-patching": true,
     "drupal-scaffold": {
-      "gitignore": false,
       "allowed-packages": [
         "amazeeio/drupal_integrations",
         "iconagency/drupal_integrations"
