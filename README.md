@@ -24,7 +24,7 @@ Opinionated config and structure for development. Recommended base modules and p
 ```
 
 ## This library
-- https://packagist.org/packages/iconagency/lagoon-drupal
+- https://packagist.org/packages/iconagency/drupal_integrations
 - https://bitbucket.org/iconagency/lagoon-drupal-integrations
 
 ## Icon Agency docs
