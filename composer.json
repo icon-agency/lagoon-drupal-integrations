@@ -39,7 +39,7 @@
         },
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
         "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
-        "[project-root]/renovate.json": "assets/renovate.json",
+        "[project-root]/.renovaterc": "assets/.renovaterc",
         "[project-root]/config/sync/.gitkeep": "assets/config/sync/.gitkeep",
         "[project-root]/config/dev/README.md": "assets/config/dev/README.md",
         "[project-root]/assets/README.md": "assets/assets/README.md",
