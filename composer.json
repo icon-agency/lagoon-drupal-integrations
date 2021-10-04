@@ -38,7 +38,6 @@
           "overwrite": false
         },
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
-        "[project-root]/.lando.dist.yml": "assets/.lando.dist.yml",
         "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
         "[project-root]/renovate.json": "assets/renovate.json",
         "[project-root]/config/sync/.gitkeep": "assets/config/sync/.gitkeep",
