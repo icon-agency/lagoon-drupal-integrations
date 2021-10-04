@@ -1,16 +1,29 @@
 # Icon Agency Lagoon Integrations
 
-Metapackage to support integration with Amazee Lagoon.
+Icon Agency integration with Amazee Lagoon.
 
-Opinionated installs that overwrite upstream projects.
+Opinionated config and structure for development. Recommended base modules and patches.
 
 ## Usage
 
-This is just a metapackage that installs some extra bits required for Lagoon. Please read the AmazeeIO Drupal Integrations README for more information.
+```yml
+  "require": {
+    "amazeeio/drupal_integrations": "^0.3.6",
+    "iconagency/drupal_integrations": "^9.0.5",
+  },
+  "extra": {
+    "enable-patching": true,
+    "drupal-scaffold": {
+      "gitignore": false,
+      "allowed-packages": [
+        "amazeeio/drupal_integrations",
+        "iconagency/drupal_integrations"
+      ],
+    }
+  }
+```
 
-https://github.com/amazeeio/drupal-integrations
-
-## This metapackage
+## This library
 - https://packagist.org/packages/iconagency/lagoon-drupal
 - https://bitbucket.org/iconagency/lagoon-drupal-integrations
 
@@ -19,3 +32,6 @@ https://github.com/amazeeio/drupal-integrations
 
 ## Drupal project
 - https://bitbucket.org/iconagency/lagoon-drupal/
+
+## Recommends
+- https://github.com/amazeeio/drupal-integrations
