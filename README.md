@@ -9,7 +9,7 @@ Opinionated config and structure for development. Recommended base modules and p
 ```yml
   "require": {
     "amazeeio/drupal_integrations": "^0.3.6",
-    "iconagency/drupal_integrations": "^9.0.5",
+    "iconagency/drupal_integrations": "^9.0.6",
   },
   "extra": {
     "enable-patching": true,
