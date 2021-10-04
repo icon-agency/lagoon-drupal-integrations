@@ -24,13 +24,11 @@ Opinionated config and structure for development. Recommended base modules and p
 
 This library will install:
 - vscode recommendations
-- assets README
-- config README
-- project README
 - drush.yml defaults
 - .nvmrc
 - renovate.json
 - phpcs standards
+- modules for use with lagoon/amazee/fastly
 
 ## This library
 - https://packagist.org/packages/iconagency/drupal_integrations

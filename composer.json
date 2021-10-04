@@ -16,6 +16,7 @@
     }
   },
   "require": {
+    "drupal/environment_indicator": "^4.0.3",
     "drupal/fastly": "3.14",
     "drupal/http_cache_control": "^2.0",
     "drupal/lagoon_logs": "^1.1.0",
@@ -38,23 +39,11 @@
           "overwrite": false
         },
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
+        "[project-root]/.eslintrc.json": "assets/.eslintrc.json",
+        "[project-root]/.prettierrc.js": "assets/.prettierrc.js",
+        "[project-root]/.stylelintrc.json": "assets/.stylelintrc.json",
         "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
         "[project-root]/renovate.json": "assets/renovate.json",
-        "[project-root]/config/sync/.gitkeep": {
-          "mode": "replace",
-          "path": "assets/config/sync/.gitkeep",
-          "overwrite": false
-        },
-        "[project-root]/config/dev/README.md": {
-          "mode": "replace",
-          "path": "assets/config/dev/README.md",
-          "overwrite": false
-        },
-        "[project-root]/assets/README.md": {
-          "mmore": "replace",
-          "path": "assets/assets/README.md",
-          "overwrite": false
-        },
         "[project-root]/README.md": {
           "mode": "replace",
           "path": "assets/README.md",
