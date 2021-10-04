@@ -68,7 +68,6 @@
   },
   "suggest": {
     "amazeeio/drupal_integrations": "Integrate with Lagoon",
-    "oomphinc/composer-installers-extender": "Install extra packages such as npm",
-    "cweagans/composer-patches": "Patch up files"
+    "oomphinc/composer-installers-extender": "Install extra packages such as npm"
   }
 }
