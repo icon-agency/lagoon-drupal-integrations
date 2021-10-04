@@ -1,3 +1,4 @@
 module.exports = {
-  ...require('./web/core/.prettierrc.json')
+  ...require('./web/core/.prettierrc.json'),
+  "printWidth": 120,
 };
