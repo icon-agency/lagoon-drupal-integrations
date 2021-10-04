@@ -1,0 +1,11 @@
+recipe: lagoon
+config:
+  flavor: drupal
+  build:
+    - composer install
+
+services:
+  nginx:
+    overrides:
+      environment:
+        BASIC_AUTH: "off"

@@ -13,6 +13,10 @@
 
 ## FAQ
 
+### How do I override Lando?
+
+Create .lando.yml file
+
 ### What does the template do?
 
 When installing the given `composer.json` some tasks are taken care of:
