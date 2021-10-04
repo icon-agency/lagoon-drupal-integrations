@@ -30,7 +30,6 @@
       }
     },
     "drupal-scaffold": {
-      "gitignore": false,
       "file-mapping": {
         "[project-root]/.vscode/extensions.json": "assets/.vscode/extensions.json",
         "[project-root]/.vscode/settings.json": {
