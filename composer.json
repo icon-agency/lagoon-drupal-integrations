@@ -18,7 +18,6 @@
   "require": {
     "cweagans/composer-patches": "^1.7.1",
     "drupal/core-composer-scaffold": "^9.2",
-    "drupal/core-recommended": "^9.2",
     "drupal/core-vendor-hardening": "^9.2",
     "drupal/fastly": "3.14",
     "drupal/http_cache_control": "^2.0",

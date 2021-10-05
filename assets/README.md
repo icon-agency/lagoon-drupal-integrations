@@ -19,7 +19,7 @@
 
 ### How do I override Lando?
 
-Create .lando.yml file
+Create .lando.local.yml file
 
 ### What does the template do?
 
