@@ -15,7 +15,9 @@
 
 ### Install dev deps for frontend
 
-`npm i --prefix web/core`
+`npm i`
+
+The `/package.json` file contains devRequirements for linting (Avoid mounting web/core/node_modules)
 
 ### How do I override Lando?
 
