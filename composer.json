@@ -58,6 +58,10 @@
         "[project-root]/README.md": {
           "path": "assets/README.md",
           "overwrite": false
+        },
+        "[project-root]/.nvmrc": {
+          "path": "assets/.nvmrc",
+          "overwrite": false
         }
       }
     }
