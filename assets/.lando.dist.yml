@@ -1,0 +1,5 @@
+services:
+  nginx:
+    overrides:
+      environment:
+        BASIC_AUTH: "off"
