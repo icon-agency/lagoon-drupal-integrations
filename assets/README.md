@@ -13,15 +13,6 @@
 
 ## FAQ
 
-### Install dev deps for frontend
-
-Try to avoid installing the web/core node_modules, it may kill your Docker. Instead use this global metapackage to install the lint tools.
-
-```bash
-nvm use
-npm install -g @iconagency/drupal-lint@^9.0.0
-```
-
 ### How do I override Lando locally?
 
 Create `/.lando.local.yml` file for local development.
