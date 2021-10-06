@@ -16,7 +16,8 @@
 ### Install dev deps for frontend
 
 ```bash
-npm i -g @iconagency/lagoon-drupal-linting
+nvm use
+npm install -g @iconagency/drupal-lint@^9.0.0
 ```
 
 ### How do I override Lando?
