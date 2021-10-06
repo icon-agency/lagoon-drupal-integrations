@@ -3,3 +3,4 @@
 /.gitignore                  export-ignore
 /renovate.json               export-ignore
 /bitbucket-pipelines.yml     export-ignore
+/npm                         export-ignore

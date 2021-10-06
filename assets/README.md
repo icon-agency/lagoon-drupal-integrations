@@ -15,13 +15,13 @@
 
 ### Install dev deps for frontend
 
-`npm i`
-
-The `/package.json` file contains devRequirements for linting (Avoid mounting web/core/node_modules)
+```bash
+npm i -g @iconagency/lagoon-drupal-linting
+```
 
 ### How do I override Lando?
 
-Create .lando.local.yml file
+Create `/.lando.local.yml` file for local development. Otherwise just edit `.lando.yml`
 
 ### What does the template do?
 
@@ -35,7 +35,6 @@ When installing the given `composer.json` some tasks are taken care of:
 - Profiles (packages of type `drupal-profile`) will be placed in `web/profiles/contrib/`
 - Creates the `web/sites/default/files`-directory.
 - Latest version of drush is installed locally for use at `vendor/bin/drush`.
-- Latest version of [Drupal Console](http://www.drupalconsole.com) is installed locally for use at `vendor/bin/drupal`.
 - The correct scaffolding for your Drupal core version is installed, along with Lagoon-specific scaffolding from our [amazeeio/drupal-integrations](https://github.com/amazeeio/drupal-integrations) project and the `assets/` directory in this repo. For more information see [drupal/core-composer-scaffold](https://github.com/drupal/core-composer-scaffold)
 
 ### Should I commit the contrib modules I download?
