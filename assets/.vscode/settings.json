@@ -3,42 +3,66 @@
   "php-docblocker.qualifyClassNames": true,
   "php-docblocker.returnGap": true,
   "php-docblocker.useShortNames": true,
+  "phpSniffer.autoDetect": true,
   "[php]": {
+    "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.formatOnPaste": false,
     "editor.defaultFormatter": "wongjn.php-sniffer"
   },
-  "typescript.validate.enable": false,
-  "files.associations": {
-    "*.module": "php",
-    "*.inc": "php",
-    "*.theme": "php",
-    "*.install": "php",
-    "*.vue": "vue"
-  },
-  "emmet.includeLanguages": {
-    "twig": "html"
-  },
-  "[vue]": {
+  "scss.validate": false,
+  "[scss]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.formatOnPaste": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
-    }
+    },
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
-  "[scss]": {
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
-    }
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "[twig]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "mblode.twig-language-2"
   },
-  "editor.rulers": [80, 120],
-  "eslint.validate": ["javascript", "vue", "vue-html", "html"],
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.module": "php",
+    "*.inc": "php",
+    "*.theme": "php",
+    "*.install": "php",
+    "*.html": "twig",
+    "*.vue": "vue"
+  },
+  "emmet.includeLanguages": {
+    "twig": "html"
+  },
   "html.format.indentHandlebars": false,
   "html.format.indentInnerHtml": true,
   "html.format.preserveNewLines": false,
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true
+  "typescript.validate.enable": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "eslint.validate": [
+    "javascript"
+  ],
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/vendor/**": true,
+    "**/node_modules/**": true
+  },
 }

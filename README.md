@@ -22,23 +22,19 @@ Opinionated config and structure for development. Recommended base modules and p
   }
 ```
 
-This library will install:
-- vscode recommendations
-- drush.yml defaults
-- .nvmrc
-- renovate.json
-- phpcs standards
-- modules for use with lagoon/amazee/fastly
-
 ## This library
+
 - https://packagist.org/packages/iconagency/drupal_integrations
 - https://bitbucket.org/iconagency/lagoon-drupal-integrations
 
 ## Icon Agency docs
+
 - https://dev.iconagency.com.au/
 
 ## Drupal project
+
 - https://bitbucket.org/iconagency/lagoon-drupal/
 
 ## Recommends
+
 - https://github.com/amazeeio/drupal-integrations
