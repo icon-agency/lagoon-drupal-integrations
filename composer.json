@@ -37,26 +37,20 @@
     },
     "drupal-scaffold": {
       "file-mapping": {
-        "[project-root]/.vscode/README.md": "assets/.vscode/README.md",
         "[project-root]/.vscode/extensions.json": "assets/.vscode/extensions.json",
-<<<<<<< HEAD
-        "[project-root]/.vscode/settings.json":  {
+        "[project-root]/.vscode/settings.json": {
           "path": "assets/.vscode/settings.json",
-=======
-        "[project-root]/.vscode/settings.json":  "assets/.vscode/settings.json",
-        "[project-root]/config/dev/README.md": {
-          "path": "assets/config/dev/README.md",
->>>>>>> d8c2696dfb35e586dd82b5989f7e57cb59f5dbd3
           "overwrite": false
         },
+        "[project-root]/.vscode/README.md": "assets/.vscode/README.md",
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
+        "[project-root]/.nvmrc": {
+          "path": "assets/.nvmrc",
+          "overwrite": false
+        },
         "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
         "[project-root]/README.md": {
           "path": "assets/README.md",
-          "overwrite": false
-        },
-        "[project-root]/.nvmrc": {
-          "path": "assets/.nvmrc",
           "overwrite": false
         }
       }
