@@ -18,16 +18,35 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
     },
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.formatOnPaste": false,
     "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yml]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
       "source.fixAll.stylelint": true
     },
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[twig]": {
     "editor.formatOnSave": true,
@@ -45,9 +64,7 @@
     "*.module": "php",
     "*.inc": "php",
     "*.theme": "php",
-    "*.install": "php",
-    "*.html": "twig",
-    "*.vue": "vue"
+    "*.install": "php"
   },
   "emmet.includeLanguages": {
     "twig": "html"
@@ -57,12 +74,10 @@
   "html.format.preserveNewLines": false,
   "typescript.validate.enable": false,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
-  "eslint.validate": [
-    "javascript"
-  ],
+  "vetur.validation.interpolation": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/vendor/**": true,
     "**/node_modules/**": true
-  },
+  }
 }
