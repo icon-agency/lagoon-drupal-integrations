@@ -17,6 +17,10 @@
 
 Create `/.lando.local.yml` file for local development.
 
+### How can I optimize my Lando?
+
+Take a look at [Lando performance](https://docs.lando.dev/config/performance.html#configuration)
+
 ### What does the template do?
 
 When installing the given `composer.json` some tasks are taken care of:
