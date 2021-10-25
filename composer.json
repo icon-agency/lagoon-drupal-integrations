@@ -39,6 +39,7 @@
     "drupal-scaffold": {
       "file-mapping": {
         "[project-root]/.vscode/extensions.json": "assets/.vscode/extensions.json",
+        "[project-root]/.vscode/launch.json": "assets/.vscode/launch.json",
         "[project-root]/.vscode/settings.json": {
           "path": "assets/.vscode/settings.json",
           "overwrite": false
