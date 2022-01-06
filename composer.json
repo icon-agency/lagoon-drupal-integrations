@@ -18,7 +18,7 @@
   "require": {
     "drupal/fastly": "3.14",
     "drupal/http_cache_control": "^2.0",
-    "drupal/lagoon_logs": "^1.1.0",
+    "drupal/lagoon_logs": "^2.0.0",
     "drupal/purge": "^3.1",
     "drupal/stage_file_proxy": "^1.1",
     "drush/drush": "^10.6.0"
