@@ -45,11 +45,7 @@
           "overwrite": false
         },
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
-        "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
-        "[project-root]/README.md": {
-          "path": "assets/README.md",
-          "overwrite": false
-        }
+        "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist"
       }
     }
   },
