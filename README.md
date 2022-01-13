@@ -22,6 +22,8 @@ Opinionated config and structure for development. Recommended base modules and p
   }
 ```
 
+On deploy you should run `bin/deploy.sh` via whatever methods you please. Generally integrated into Lagoon Tools.
+
 ## This library
 
 - https://packagist.org/packages/iconagency/drupal_integrations
