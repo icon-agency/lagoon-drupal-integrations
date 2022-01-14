@@ -4,36 +4,17 @@ set -euo pipefail
 
 # This script is called by Lagoon Tools or manually by you.
 # Usage: post_rollout $LAGOON_PRODUCTION_URL
-function iconagency_post_rollout() {
-  local LAGOON_PRODUCTION_URL=$1
-  local LAGOON_ENVIRONMENT_TYPE=${LAGOON_ENVIRONMENT_TYPE:-production}
-  local FASTLY_API_TOKEN=${FASTLY_API_TOKEN:-}
-  local FASTLY_API_SERVICE=${FASTLY_API_SERVICE:-}
 
-  if [ "$LAGOON_ENVIRONMENT_TYPE" == "production" ]; then
+LAGOON_PRODUCTION_URL=${LAGOON_PRODUCTION_URL:-production}
+LAGOON_ENVIRONMENT_TYPE=${LAGOON_ENVIRONMENT_TYPE:-production}
+FASTLY_API_TOKEN=${FASTLY_API_TOKEN:-}
+FASTLY_API_SERVICE=${FASTLY_API_SERVICE:-}
 
-    # Enable Fastly
-    if [ "$FASTLY_API_TOKEN" && "$FASTLY_API_SERVICE" ]; then
-      drush -y pm-enable \
-        fastly \
-        fastlypurger \
-        http_cache_control \
-        purge purge_ui \
-        purge_processor_lateruntime \
-        purge_processor_cron \
-        purge_queuer_coretags \
-        purge_drush
+if [ "$LAGOON_ENVIRONMENT_TYPE" == "production" ]; then
 
-      drush -y config:import --source="../vendor/iconagency/drupal_integrations/config" --partial
-    fi
-
-    # Disable SFP
-    drush -y pm:uninstall stage_file_proxy || true
-    drush -y config:delete stage_file_proxy.settings origin || true
-
-  else
-    # Disable Fastly
-    drush -y pm-uninstall \
+  # Enable Fastly
+  if [ "$FASTLY_API_TOKEN" && "$FASTLY_API_SERVICE" ]; then
+    drush -y -q pm-enable \
       fastly \
       fastlypurger \
       http_cache_control \
@@ -41,14 +22,31 @@ function iconagency_post_rollout() {
       purge_processor_lateruntime \
       purge_processor_cron \
       purge_queuer_coretags \
-      purge_drush || true
+      purge_drush
 
-    # Enable SFP
-    drush -y pm:enable stage_file_proxy
-    drush -y config:set stage_file_proxy.settings origin "$LAGOON_PRODUCTION_URL"
+    drush -y config:import --source="../vendor/iconagency/drupal_integrations/config" --partial
   fi
 
-  # Enable Lagoon Logs
-  drush -y pm:enable lagoon_logs
-  drush -y pm:uninstall dblog || true
-}
+  # Disable SFP
+  drush -y -q pm:uninstall stage_file_proxy || true
+  drush -y -q config:delete stage_file_proxy.settings origin || true
+
+else
+  # Disable Fastly
+  drush -y -q pm-uninstall \
+    fastly \
+    fastlypurger \
+    http_cache_control \
+    purge purge_ui \
+    purge_processor_lateruntime \
+    purge_processor_cron \
+    purge_queuer_coretags \
+    purge_drush || true
+
+  drush -y -q pm:enable stage_file_proxy
+  drush -y -q config:set stage_file_proxy.settings origin "$LAGOON_PRODUCTION_URL"
+fi
+
+# Enable Lagoon Logs
+drush -y -q pm:enable lagoon_logs
+drush -y -q pm:uninstall dblog || true
