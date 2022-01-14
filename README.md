@@ -22,7 +22,7 @@ Opinionated config and structure for development. Recommended base modules and p
   }
 ```
 
-On deploy you should run `bin/deploy.sh` via whatever methods you please. Generally integrated into Lagoon Tools.
+On deploy you should run `bin/post-rollout` via whatever methods you please. This is integrated into IconAgency Lagoon Tools.
 
 ## This library
 
