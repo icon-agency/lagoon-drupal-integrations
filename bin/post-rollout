@@ -14,7 +14,7 @@ if [ "$LAGOON_ENVIRONMENT_TYPE" == "production" ]; then
 
   # Enable Fastly
   if [ "$FASTLY_API_TOKEN" && "$FASTLY_API_SERVICE" ]; then
-    drush -y -q pm-enable \
+    drush -y pm-enable \
       fastly \
       fastlypurger \
       http_cache_control \
@@ -28,12 +28,12 @@ if [ "$LAGOON_ENVIRONMENT_TYPE" == "production" ]; then
   fi
 
   # Disable SFP
-  drush -y -q pm:uninstall stage_file_proxy || true
-  drush -y -q config:delete stage_file_proxy.settings origin || true
+  drush -y pm:uninstall stage_file_proxy || true
+  drush -y config:delete stage_file_proxy.settings origin || true
 
 else
   # Disable Fastly
-  drush -y -q pm-uninstall \
+  drush -y pm-uninstall \
     fastly \
     fastlypurger \
     http_cache_control \
@@ -43,10 +43,10 @@ else
     purge_queuer_coretags \
     purge_drush || true
 
-  drush -y -q pm:enable stage_file_proxy
-  drush -y -q config:set stage_file_proxy.settings origin "$LAGOON_PRODUCTION_URL"
+  drush -y pm:enable stage_file_proxy
+  drush -y config:set stage_file_proxy.settings origin "$LAGOON_PRODUCTION_URL"
 fi
 
 # Enable Lagoon Logs
-drush -y -q pm:enable lagoon_logs
-drush -y -q pm:uninstall dblog || true
+drush -y pm:enable lagoon_logs
+drush -y pm:uninstall dblog || true
