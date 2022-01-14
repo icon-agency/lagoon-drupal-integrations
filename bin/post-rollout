@@ -13,7 +13,7 @@ FASTLY_API_SERVICE=${FASTLY_API_SERVICE:-}
 if [ "$LAGOON_ENVIRONMENT_TYPE" == "production" ]; then
 
   # Enable Fastly
-  if [ "$FASTLY_API_TOKEN" && "$FASTLY_API_SERVICE" ]; then
+  if [ "$FASTLY_API_TOKEN" ] && [ "$FASTLY_API_SERVICE" ]; then
     drush -y pm-enable \
       fastly \
       fastlypurger \
