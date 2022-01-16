@@ -46,7 +46,7 @@
         },
         "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
         "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
-        "[project-root]/drush/Commands/contrib/iconagency/src/IconAgencyCommands.php": "src/Commands/IconAgencyCommands.php"
+        "[project-root]/drush/Commands/contrib/iconagency/src/IconAgencyCommands.php": "assets/drush/Commands/IconAgencyCommands.php"
       }
     }
   },
