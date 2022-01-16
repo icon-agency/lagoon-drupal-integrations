@@ -54,7 +54,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
    *
    * @return void
    */
-  private function production(SiteAlias $site, array $options = []):void {
+  private function production(SiteAlias $site, array $options = []): void {
     $manager = $this->processManager();
 
     if (getenv('FASTLY_API_TOKEN') && getenv('FASTLY_API_SERVICE') && !getenv('CI')) {
@@ -95,7 +95,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
    *
    * @return void
    */
-  private function development(SiteAlias $site, array $options = []):void {
+  private function development(SiteAlias $site, array $options = []): void {
     $manager = $this->processManager();
 
     $manager->drush($site, 'pm:enable', ['stage_file_proxy'], $options)->mustRun();
