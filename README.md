@@ -1,8 +1,9 @@
 # Icon Agency Lagoon Integrations
 
-Icon Agency integration with Amazee Lagoon.
+Icon Agency integration with Amazee Lagoon.\
+Recommended modules, patches and config for Lagoon.
 
-Opinionated config and structure for development. Recommended base modules and patches.
+Contains a Drush `drush deploy:hook` pre-command hook to complement [Lagoon Tools](https://bitbucket.org/iconagency/lagoon-tools/src/master/tasks/drupal/8x-9x/post-rollout) CI/CD.
 
 ## Usage
 
@@ -21,8 +22,6 @@ Opinionated config and structure for development. Recommended base modules and p
     }
   }
 ```
-
-On deploy you should run `bin/post-rollout` via whatever methods you please. This is integrated into IconAgency Lagoon Tools.
 
 ## This library
 
