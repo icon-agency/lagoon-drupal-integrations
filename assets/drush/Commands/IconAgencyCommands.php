@@ -136,6 +136,6 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
 
     $process->run();
 
-    return $process->isSuccessful() ? $process->getOutput() : getenv('LAGOON_PRODUCTION_URL');
+    return $process->isSuccessful() ? trim($process->getOutput()) : getenv('LAGOON_PRODUCTION_URL');
   }
 }
