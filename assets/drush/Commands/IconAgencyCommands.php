@@ -16,7 +16,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
   use SiteAliasManagerAwareTrait;
 
   /**
-   * Run deploy commands
+   * Hook into the drush hook:deploy command and add site requirements.
    *
    * @hook pre-command deploy:hook
    */
@@ -45,7 +45,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
 
 
   /**
-   * Production pot deployment tasks
+   * Production post deployment tasks
    *
    * @param \Consolidation\SiteAlias\SiteAlias $site
    *   Site to run commands on.
@@ -86,7 +86,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
   }
 
   /**
-   * Development pot deployment tasks
+   * Development post deployment tasks
    *
    * @param \Consolidation\SiteAlias\SiteAlias $site
    *   Site to run commands on.
@@ -104,7 +104,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
   }
 
   /**
-   * Development pot deployment tasks
+   * All post deployment tasks
    *
    * @param \Consolidation\SiteAlias\SiteAlias $site
    *   Site to run commands on.
@@ -121,7 +121,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
   }
 
   /**
-   * Get hthe Lagoon production URL.
+   * Get the Lagoon production URL.
    * 
    * @return string 
    */
