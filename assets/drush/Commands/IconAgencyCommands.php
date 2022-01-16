@@ -99,7 +99,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
     $manager = $this->processManager();
 
     $manager->drush($site, 'pm:enable', ['stage_file_proxy'], $options)->mustRun();
-    $config = ['stage_file_proxy.settings', 'origin', '"' . $this->productionUrl() . '"'];
+    $config = ['stage_file_proxy.settings', 'origin', $this->productionUrl()];
     $manager->drush($site, 'config:set', $config, $options)->mustRun();
   }
 
