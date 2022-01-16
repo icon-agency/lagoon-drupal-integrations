@@ -38,6 +38,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
     }
 
     $this->all($self, $redispatchOptions);
+    $this->processManager()->drush($self, 'cache:rebuild', [], $redispatchOptions)->mustRun();
 
     $this->logger()->success("IconAgency post-deployments complete.");
   }
@@ -96,7 +97,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
    */
   private function development(SiteAlias $site, array $options = []):void {
     $manager = $this->processManager();
-    
+
     $manager->drush($site, 'pm:enable', ['stage_file_proxy'], $options)->mustRun();
     $config = ['stage_file_proxy.settings', 'origin', '"' . $this->productionUrl() . '"'];
     $manager->drush($site, 'config:set', $config, $options)->mustRun();
