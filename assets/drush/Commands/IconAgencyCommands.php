@@ -73,7 +73,7 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
 
       $fastlyConfig = [
         'partial' => true,
-        'source' => '../vendor/iconagency/drupal_integrations/config'
+        'source' => '../vendor/iconagency/drupal_integrations/config/fastly'
       ];
 
       $this->logger()->info("Enabling Fastly.");
