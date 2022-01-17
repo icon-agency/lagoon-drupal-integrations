@@ -33,7 +33,8 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
 
     if (getenv('LAGOON_ENVIRONMENT_TYPE') === 'production') {
       $this->production($self, $redispatchOptions);
-    } else {
+    }
+    else {
       $this->development($self, $redispatchOptions);
     }
 
@@ -43,16 +44,13 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
     $this->logger()->success("IconAgency post-deployments complete.");
   }
 
-
   /**
-   * Production post deployment tasks
+   * Production post deployment tasks.
    *
    * @param \Consolidation\SiteAlias\SiteAlias $site
    *   Site to run commands on.
    * @param array $options
    *   Command options.
-   *
-   * @return void
    */
   private function production(SiteAlias $site, array $options = []): void {
     $manager = $this->processManager();
@@ -68,12 +66,12 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
         'purge_processor_lateruntime',
         'purge_processor_cron',
         'purge_queuer_coretags',
-        'purge_drush'
+        'purge_drush',
       ];
 
       $fastlyConfig = [
-        'partial' => true,
-        'source' => '../vendor/iconagency/drupal_integrations/config/fastly'
+        'partial' => TRUE,
+        'source' => '../vendor/iconagency/drupal_integrations/config/fastly',
       ];
 
       $this->logger()->info("Enabling Fastly.");
@@ -86,14 +84,12 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
   }
 
   /**
-   * Development post deployment tasks
+   * Development post deployment tasks.
    *
    * @param \Consolidation\SiteAlias\SiteAlias $site
    *   Site to run commands on.
    * @param array $options
    *   Command options.
-   *
-   * @return void
    */
   private function development(SiteAlias $site, array $options = []): void {
     $manager = $this->processManager();
@@ -104,14 +100,12 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
   }
 
   /**
-   * All post deployment tasks
+   * All post deployment tasks.
    *
    * @param \Consolidation\SiteAlias\SiteAlias $site
    *   Site to run commands on.
    * @param array $options
    *   Command options.
-   *
-   * @return void
    */
   private function all(SiteAlias $site, array $options = []): void {
     $manager = $this->processManager();
@@ -122,8 +116,9 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
 
   /**
    * Get the Lagoon production URL.
-   * 
-   * @return string 
+   *
+   * @return string
+   *   URL to production host
    */
   private function productionUrl(): ?string {
     $manager = $this->processManager();
@@ -131,11 +126,12 @@ class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareI
     $process = $manager->process([
       'bash',
       '-c',
-      '. /lagoon-tools/tasks/common/get_production_url && echo $(get_production_url)'
+      '. /lagoon-tools/tasks/common/get_production_url && echo $(get_production_url)',
     ]);
 
     $process->run();
 
     return $process->isSuccessful() ? trim($process->getOutput()) : getenv('LAGOON_PRODUCTION_URL');
   }
+
 }
