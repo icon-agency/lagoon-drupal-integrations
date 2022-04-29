@@ -16,14 +16,12 @@
     }
   },
   "require": {
-    "drupal/fastly": "3.14",
-    "drupal/http_cache_control": "^2.0",
-    "drupal/lagoon_logs": "^2.0.0",
-    "drupal/purge": "^3.1",
-    "drupal/stage_file_proxy": "^1.1",
-    "drush/drush": "^10.6.0"
+    "drupal/core": "^10.0"
   },
-  "minimum-stability": "stable",
+  "require-dev": {
+    "drush/drush": "^11.0"
+  },
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
     "sort-packages": true
@@ -37,16 +35,7 @@
     },
     "drupal-scaffold": {
       "file-mapping": {
-        "[project-root]/.vscode/README.md": "assets/.vscode/README.md",
-        "[project-root]/.vscode/extensions.json": "assets/.vscode/extensions.json",
-        "[project-root]/.vscode/launch.json": "assets/.vscode/launch.json",
-        "[project-root]/.vscode/settings.json": {
-          "path": "assets/.vscode/settings.json",
-          "overwrite": false
-        },
-        "[project-root]/drush/drush.yml": "assets/drush/drush.yml",
-        "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
-        "[project-root]/drush/Commands/contrib/iconagency/src/IconAgencyCommands.php": "assets/drush/Commands/IconAgencyCommands.php"
+        "[project-root]/drush/drush.yml": "drush.yml"
       }
     }
   },
