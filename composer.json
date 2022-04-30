@@ -35,13 +35,13 @@
     },
     "drupal-scaffold": {
       "file-mapping": {
-        "[project-root]/drush/drush.yml": "drush.yml"
+        "[project-root]/drush/drush.yml": "assets/drush.yml"
       }
     }
   },
   "suggest": {
-    "composer/installers": "^1.12 || ^2.0",
-    "amazeeio/drupal_integrations": "^0.3.6",
+    "composer/installers": "^2.0",
+    "amazeeio/drupal_integrations": "^0.3.7",
     "oomphinc/composer-installers-extender": "^2.0"
   }
 }
