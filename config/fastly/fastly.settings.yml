@@ -2,7 +2,7 @@ site_id: ''
 api_key: ''
 service_id: ''
 error_maintenance: ''
-purge_method: soft
+purge_method: instant
 purge_logging: false
 cache_tag_hash_length: 4
 stale_while_revalidate: true
