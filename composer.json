@@ -16,10 +16,11 @@
     }
   },
   "require": {
-    "drupal/core": "^10.0"
-  },
-  "require-dev": {
-    "drush/drush": "^11.0"
+    "drupal/core": "^10.0",
+    "drush/drush": "^11.0",
+    "drupal/http_cache_control": "^2.x-dev",
+    "drupal/purge": "3.x-dev",
+    "drupal/stage_file_proxy": "1.x-dev"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -29,8 +30,17 @@
   "extra": {
     "patches": {
       "drupal/fastly": {
-        "https://www.drupal.org/project/fastly/issues/2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff",
-        "https://www.drupal.org/project/fastly/issues/3205426": "https://www.drupal.org/files/issues/2021-03-29/fastly-validate-credentials-3205426-6.patch"
+        "2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff",
+        "3205426": "https://www.drupal.org/files/issues/2021-03-29/fastly-validate-credentials-3205426-6.patch"
+      },
+      "drupal/http_cache_control": {
+        "3283516: D10": "https://git.drupalcode.org/project/http_cache_control/-/merge_requests/3.patch"
+      },
+      "drupal/purge": {
+        "3272193: D10": "https://git.drupalcode.org/project/purge/-/merge_requests/11.patch"
+      },
+      "drupal/stage_file_proxy": {
+        "3283529: D10": "https://git.drupalcode.org/project/stage_file_proxy/-/merge_requests/11.patch"
       }
     },
     "drupal-scaffold": {

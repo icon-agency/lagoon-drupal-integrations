@@ -7,11 +7,12 @@ pipelines:
       - step:
           name: Trigger Drupal build
           script:
-            - pipe: atlassian/trigger-pipeline:4.2.1
+            - pipe: atlassian/trigger-pipeline:5.0.0
               variables:
                 BITBUCKET_USERNAME: $PIPELINES_TRIGGER_USER
                 BITBUCKET_APP_PASSWORD: $PIPELINES_TRIGGER_PASS
-                BRANCH_NAME: "10.x"
+                REF_TYPE: "branch"
+                REF_NAME: "10.x"
                 ACCOUNT: "iconagency"
                 REPOSITORY: "lagoon-drupal"
           caches:
