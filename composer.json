@@ -9,18 +9,35 @@
       "role": "Developer"
     }
   ],
-  "repositories": {
-    "drupal": {
+  "repositories": [
+    {
       "type": "composer",
-      "url": "https://packages.drupal.org/8"
+      "url": "https://packages.drupal.org/8",
+      "exclude": [
+        "drupal/http_cache_control",
+        "drupal/purge",
+        "drupal/stage_file_proxy"
+      ]
+    },
+    {
+      "type": "git",
+      "url": "git@git.drupal.org:issue/http_cache_control-3283516.git"
+    },
+    {
+      "type": "git",
+      "url": "git@git.drupal.org:issue/purge-3272193.git"
+    },
+    {
+      "type": "git",
+      "url": "git@git.drupal.org:issue/stage_file_proxy-3283529.git"
     }
-  },
+  ],
   "require": {
     "drupal/core": "^10.0",
     "drush/drush": "^11.0",
-    "drupal/http_cache_control": "^2.x-dev",
-    "drupal/purge": "3.x-dev",
-    "drupal/stage_file_proxy": "1.x-dev"
+    "drupal/http_cache_control": "dev-3283516-drupal-10-support",
+    "drupal/purge": "dev-3272193-update-symfony-response",
+    "drupal/stage_file_proxy": "dev-3283529-drupal-10-compatibility"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -28,21 +45,7 @@
     "sort-packages": true
   },
   "extra": {
-    "patches": {
-      "drupal/fastly": {
-        "2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff",
-        "3205426": "https://www.drupal.org/files/issues/2021-03-29/fastly-validate-credentials-3205426-6.patch"
-      },
-      "drupal/http_cache_control": {
-        "3283516: D10": "https://git.drupalcode.org/project/http_cache_control/-/merge_requests/3.patch"
-      },
-      "drupal/purge": {
-        "3272193: D10": "https://git.drupalcode.org/project/purge/-/merge_requests/11.patch"
-      },
-      "drupal/stage_file_proxy": {
-        "3283529: D10": "https://git.drupalcode.org/project/stage_file_proxy/-/merge_requests/11.patch"
-      }
-    },
+    "patches": {},
     "drupal-scaffold": {
       "file-mapping": {
         "[project-root]/drush/drush.yml": "assets/drush.yml"
