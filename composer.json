@@ -9,8 +9,8 @@
       "role": "Developer"
     }
   ],
-  "repositories": [
-    {
+  "repositories": {
+    "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8",
       "exclude": [
@@ -18,7 +18,7 @@
         "drupal/purge"
       ]
     },
-    {
+    "drupal/http_cache_contro": {
       "type": "package",
       "package": {
         "name": "drupal/http_cache_control",
@@ -31,16 +31,25 @@
         }
       }
     },
-    {
-      "type": "git",
-      "url": "git@git.drupal.org:issue/purge-3272193.git"
+    "drupal/purge": {
+      "type": "package",
+      "package": {
+        "name": "drupal/purge",
+        "version": "dev-custom",
+        "type": "drupal-module",
+        "source": {
+          "type": "git",
+          "url": "git@git.drupal.org:issue/purge-3272193.git",
+          "reference": "3272193-update-symfony-response"
+        }
+      }
     }
-  ],
+  },
   "require": {
     "drupal/core": "^10.0",
     "drush/drush": "^11.0",
     "drupal/http_cache_control": "dev-custom#0238e5818fb4113a19437ef94c26c1396fb462a0",
-    "drupal/purge": "dev-3272193-update-symfony-response"
+    "drupal/purge": "dev-custom#173743a599391f4989b381aa3cdd1e196f8d9494"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -54,10 +63,5 @@
         "[project-root]/drush/drush.yml": "assets/drush.yml"
       }
     }
-  },
-  "suggest": {
-    "composer/installers": "^2.0",
-    "amazeeio/drupal_integrations": "^0.3.7",
-    "oomphinc/composer-installers-extender": "^2.0"
   }
 }
