@@ -15,29 +15,32 @@
       "url": "https://packages.drupal.org/8",
       "exclude": [
         "drupal/http_cache_control",
-        "drupal/purge",
-        "drupal/stage_file_proxy"
+        "drupal/purge"
       ]
     },
     {
-      "type": "git",
-      "url": "git@git.drupal.org:issue/http_cache_control-3283516.git"
+      "type": "package",
+      "package": {
+        "name": "drupal/http_cache_control",
+        "version": "dev-custom",
+        "type": "drupal-module",
+        "source": {
+          "type": "git",
+          "url": "git@git.drupal.org:issue/http_cache_control-3283516.git",
+          "reference": "3283516-drupal-10-support"
+        }
+      }
     },
     {
       "type": "git",
       "url": "git@git.drupal.org:issue/purge-3272193.git"
-    },
-    {
-      "type": "git",
-      "url": "git@git.drupal.org:issue/stage_file_proxy-3283529.git"
     }
   ],
   "require": {
     "drupal/core": "^10.0",
     "drush/drush": "^11.0",
-    "drupal/http_cache_control": "dev-3283516-drupal-10-support",
-    "drupal/purge": "dev-3272193-update-symfony-response",
-    "drupal/stage_file_proxy": "dev-3283529-drupal-10-compatibility"
+    "drupal/http_cache_control": "dev-custom#0238e5818fb4113a19437ef94c26c1396fb462a0",
+    "drupal/purge": "dev-3272193-update-symfony-response"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
