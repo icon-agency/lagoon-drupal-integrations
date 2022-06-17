@@ -12,44 +12,12 @@
   "repositories": {
     "drupal": {
       "type": "composer",
-      "url": "https://packages.drupal.org/8",
-      "exclude": [
-        "drupal/http_cache_control",
-        "drupal/purge"
-      ]
-    },
-    "drupal/http_cache_control": {
-      "type": "package",
-      "package": {
-        "name": "drupal/http_cache_control",
-        "version": "dev-custom",
-        "type": "drupal-module",
-        "source": {
-          "type": "git",
-          "url": "git@git.drupal.org:issue/http_cache_control-3283516.git",
-          "reference": "3283516-drupal-10-support"
-        }
-      }
-    },
-    "drupal/purge": {
-      "type": "package",
-      "package": {
-        "name": "drupal/purge",
-        "version": "dev-custom",
-        "type": "drupal-module",
-        "source": {
-          "type": "git",
-          "url": "git@git.drupal.org:issue/purge-3272193.git",
-          "reference": "3272193-update-symfony-response"
-        }
-      }
+      "url": "https://packages.drupal.org/8"
     }
   },
   "require": {
     "drupal/core": "^10.0",
-    "drush/drush": "^11.0",
-    "drupal/http_cache_control": "dev-custom#0238e5818fb4113a19437ef94c26c1396fb462a0",
-    "drupal/purge": "dev-custom#173743a599391f4989b381aa3cdd1e196f8d9494"
+    "drush/drush": "^11.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
