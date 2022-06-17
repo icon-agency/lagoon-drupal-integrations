@@ -208,7 +208,7 @@ final class IconAgencyCommands extends DrushCommands implements SiteAliasManager
     /** @var \Drush\SiteAlias\ProcessManager $manager */
     $manager = $this->processManager();
 
-    $options = [...Drush::redispatchOptions(), ...$options];
+    $options = array_merge(Drush::redispatchOptions(), $options);
 
     $process = $manager->drush($this->siteAliasManager()->getSelf(), $action, $config, $options);
     $process->run($process->showRealtime());
