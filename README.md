@@ -9,8 +9,8 @@ Contains a Drush `drush deploy:hook` pre-command hook to complement [Lagoon Tool
 
 ```yml
   "require": {
-    "amazeeio/drupal_integrations": "^0.3.6",
-    "iconagency/drupal_integrations": "^9.0.6",
+    "amazeeio/drupal_integrations": "^0.3.7",
+    "iconagency/drupal_integrations": "^9.1",
   },
   "extra": {
     "enable-patching": true,
