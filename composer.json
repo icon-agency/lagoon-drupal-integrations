@@ -19,7 +19,7 @@
     "drupal/fastly": "3.14",
     "drupal/http_cache_control": "^2.0",
     "drupal/lagoon_logs": "^2.0.0",
-    "drupal/purge": "^3.1",
+    "drupal/purge": "3.2",
     "drupal/stage_file_proxy": "^1.1",
     "drush/drush": "^11"
   },
@@ -31,6 +31,9 @@
       "drupal/fastly": {
         "https://www.drupal.org/project/fastly/issues/2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff",
         "https://www.drupal.org/project/fastly/issues/3205426": "https://www.drupal.org/files/issues/2021-03-29/fastly-validate-credentials-3205426-6.patch"
+      },
+      "drupal/purge": {
+        "https://www.drupal.org/project/purge/issues/3259320": "https://git.drupalcode.org/project/purge/-/merge_requests/10.diff"
       }
     },
     "drupal-scaffold": {
