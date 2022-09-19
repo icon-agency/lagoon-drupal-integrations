@@ -1,5 +1,6 @@
 purgers:
-  - order_index: 2
+  -
     instance_id: 4a4916353c
     plugin_id: fastly
+    order_index: 2
 queue: database

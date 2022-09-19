@@ -1,18 +1,22 @@
 channels:
-  - id: purgers
+  -
+    id: purgers
     grants:
       - 0
       - 2
       - 3
-  - id: queue
+  -
+    id: queue
     grants:
       - 0
       - 2
       - 3
-  - id: diagnostics
+  -
+    id: diagnostics
     grants:
       - 3
-  - id: purger_fastly_4a4916353c
+  -
+    id: purger_fastly_4a4916353c
     grants:
       - 0
       - 2
