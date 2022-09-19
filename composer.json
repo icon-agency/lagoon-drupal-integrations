@@ -16,6 +16,7 @@
     }
   },
   "require": {
+    "php": ">= 8.1",
     "drupal/fastly": "3.14",
     "drupal/http_cache_control": "^2.0",
     "drupal/lagoon_logs": "^2.0.1",
