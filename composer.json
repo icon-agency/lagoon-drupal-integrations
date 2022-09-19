@@ -16,19 +16,28 @@
     }
   },
   "require": {
-    "drupal/core": "^10.0",
-    "drush/drush": "^11.0"
+    "drupal/fastly": "3.14",
+    "drupal/http_cache_control": "^2.0",
+    "drupal/lagoon_logs": "^2.0.1",
+    "drupal/purge": "^3.4",
+    "drupal/stage_file_proxy": "^1.3",
+    "drush/drush": "^11"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "config": {
     "sort-packages": true
   },
   "extra": {
-    "patches": {},
+    "patches": {
+      "drupal/fastly": {
+        "https://www.drupal.org/project/fastly/issues/2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff",
+        "https://www.drupal.org/project/fastly/issues/3205426": "https://www.drupal.org/files/issues/2021-03-29/fastly-validate-credentials-3205426-6.patch"
+      }
+    },
     "drupal-scaffold": {
       "file-mapping": {
-        "[project-root]/drush/drush.yml": "assets/drush.yml"
+        "[project-root]/drush/drush.yml": "assets/drush.yml",
+        "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
+        "[project-root]/drush/Commands/contrib/iconagency/src/IconAgencyCommands.php": "assets/IconAgencyCommands.php"
       }
     }
   }

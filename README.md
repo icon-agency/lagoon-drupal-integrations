@@ -9,7 +9,12 @@ Contains a Drush `drush deploy:hook` pre-command hook to complement [Lagoon Tool
 
 ```yml
   "require": {
+<<<<<<< HEAD
     "iconagency/drupal_integrations": "^10.0.0",
+=======
+    "amazeeio/drupal_integrations": "^0.3.7",
+    "iconagency/drupal_integrations": "^9.1",
+>>>>>>> 9.x
   },
   "extra": {
     "enable-patching": true,

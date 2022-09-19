@@ -1,0 +1,16 @@
+api_key: ''
+cache_tag_hash_length: 4
+site_id: ''
+service_id: ''
+purge_logging: false
+purge_method: soft
+stale_while_revalidate: true
+stale_while_revalidate_value: 10800
+stale_if_error: true
+stale_if_error_value: 86400
+webhook_notifications:
+  purge_keys: purge_keys
+  purge_all: purge_all
+webhook_enabled: false
+webhook_url: ''
+error_maintenance: ''
