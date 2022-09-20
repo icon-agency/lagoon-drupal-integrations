@@ -1,6 +1,6 @@
 <?php
 
-namespace Drush\Commands\iconagency;
+namespace IconAgency\Drush\Commands;
 
 use Symfony\Component\Yaml\Yaml;
 use Consolidation\SiteAlias\SiteAliasManagerAwareTrait;
@@ -13,7 +13,7 @@ use Drush\Drush;
 /**
  * Deployment commands for the Lagoon stack.
  */
-final class IconAgencyCommands extends DrushCommands implements SiteAliasManagerAwareInterface {
+final class DeployCommands extends DrushCommands implements SiteAliasManagerAwareInterface {
 
   use SiteAliasManagerAwareTrait;
 
@@ -142,9 +142,7 @@ final class IconAgencyCommands extends DrushCommands implements SiteAliasManager
    * Enable Stage File Proxy.
    */
   private function enableStageFileProxy(): void {
-    if (!$domain = $this->getProductionDomain()) {
-      return;
-    }
+    $domain = $this->getProductionDomain();
 
     if ($auth = $this->getProductionAuth()) {
       $domain = $auth . '@' . $domain;
@@ -194,20 +192,21 @@ final class IconAgencyCommands extends DrushCommands implements SiteAliasManager
 
   /**
    * Get the Lagoon production URL.
+   *
+   * If we have a domain and tls is enabled, first value is assumed live.
    */
-  private function getProductionDomain(): ?string {
+  private function getProductionDomain(): string {
 
     $branch = getenv('LAGOON_PRODUCTION_BRANCH') ?: 'master';
     $project = getenv('LAGOON_PROJECT');
     $stack = getenv('LAGOON_KUBERNETES');
 
-    $yml = Yaml::parse(file_get_contents('/app/.lagoon.yml'));
+    $yml = Yaml::parseFile('/app/.lagoon.yml');
 
     $routes = array_reduce($yml['environments']['master']['routes'] ?? [], 'array_merge', []);
     $domains = array_reduce($routes['nginx'] ?? [], 'array_merge', []);
     $domains_tls = array_filter($domains, fn($domain) => $domain['tls-acme'] ?? FALSE);
 
-    // If we have a domain and tls is enabled, first value is assumed live.
     return empty($domains_tls) ? "nginx.$branch.$project.$stack" : key($domains_tls);
   }
 

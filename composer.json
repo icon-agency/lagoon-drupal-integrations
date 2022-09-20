@@ -17,12 +17,15 @@
   },
   "require": {
     "php": ">= 8.1",
-    "drupal/fastly": "3.14",
-    "drupal/http_cache_control": "^2.0",
-    "drupal/lagoon_logs": "^2.0.1",
+    "drupal/http_cache_control": "2.x-dev",
+    "drupal/lagoon_logs": "2.x-dev",
     "drupal/purge": "^3.4",
-    "drupal/stage_file_proxy": "^1.3",
     "drush/drush": "^11"
+  },
+  "autoload": {
+    "psr-4": {
+      "IconAgency\\": "src"
+    }
   },
   "config": {
     "sort-packages": true
@@ -37,8 +40,7 @@
     "drupal-scaffold": {
       "file-mapping": {
         "[project-root]/drush/drush.yml": "assets/drush.yml",
-        "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist",
-        "[project-root]/drush/Commands/contrib/iconagency/src/IconAgencyCommands.php": "assets/IconAgencyCommands.php"
+        "[project-root]/.phpcs.xml.dist": "assets/.phpcs.xml.dist"
       }
     }
   }

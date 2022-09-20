@@ -3,18 +3,11 @@
 Icon Agency integration with Amazee Lagoon.\
 Recommended modules, patches and config for Lagoon.
 
-Contains a Drush `drush deploy:hook` pre-command hook to complement [Lagoon Tools](https://bitbucket.org/iconagency/lagoon-tools/src/master/tasks/drupal/8x-9x/post-rollout) CI/CD.
-
 ## Usage
 
 ```yml
   "require": {
-<<<<<<< HEAD
     "iconagency/drupal_integrations": "^10.0.0",
-=======
-    "amazeeio/drupal_integrations": "^0.3.7",
-    "iconagency/drupal_integrations": "^9.1",
->>>>>>> 9.x
   },
   "extra": {
     "enable-patching": true,
@@ -35,10 +28,14 @@ Contains a Drush `drush deploy:hook` pre-command hook to complement [Lagoon Tool
 
 - https://dev.iconagency.com.au/
 
-## Drupal project
-
-- https://bitbucket.org/iconagency/lagoon-drupal/
-
 ## Recommends
 
 - https://github.com/amazeeio/drupal-integrations
+
+## Waiting
+
+"drupal/fastly": "3.14",
+"drupal/stage_file_proxy": "^1.3",
+
+- https://www.drupal.org/project/stage_file_proxy/issues/3289828
+- https://www.drupal.org/files/issues/2022-07-22/fastly.3.x-dev.rector.patch
