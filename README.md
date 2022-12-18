@@ -35,7 +35,5 @@ Recommended modules, patches and config for Lagoon.
 ## Waiting
 
 "drupal/fastly": "3.14",
-"drupal/stage_file_proxy": "^1.3",
 
-- https://www.drupal.org/project/stage_file_proxy/issues/3289828
 - https://www.drupal.org/files/issues/2022-07-22/fastly.3.x-dev.rector.patch

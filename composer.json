@@ -20,6 +20,7 @@
     "drupal/http_cache_control": "2.x-dev",
     "drupal/lagoon_logs": "2.x-dev",
     "drupal/purge": "^3.4",
+    "drupal/stage_file_proxy": "^2.0",
     "drush/drush": "^11"
   },
   "autoload": {
