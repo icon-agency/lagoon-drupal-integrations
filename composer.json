@@ -17,8 +17,8 @@
   },
   "require": {
     "php": ">= 8.1",
-    "drupal/http_cache_control": "2.x-dev",
-    "drupal/lagoon_logs": "2.x-dev",
+    "drupal/http_cache_control": "^2.1",
+    "drupal/lagoon_logs": "^2.1",
     "drupal/purge": "^3.4",
     "drupal/stage_file_proxy": "^2.0",
     "drush/drush": "^11"
