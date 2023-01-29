@@ -5,6 +5,9 @@ Recommended modules, patches and config for Lagoon.
 
 Contains a Drush `drush deploy:hook` pre-command hook to complement [Lagoon Tools](https://bitbucket.org/iconagency/lagoon-tools/src/master/tasks/drupal/8x-9x/post-rollout) CI/CD.
 
+Tagged releases deploy to packagist \
+Untagged as dev
+
 ## Usage
 
 ```yml
