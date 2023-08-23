@@ -32,12 +32,7 @@
     "sort-packages": true
   },
   "extra": {
-    "patches": {
-      "drupal/fastly": {
-        "https://www.drupal.org/project/fastly/issues/2908228": "https://git.drupalcode.org/project/fastly/-/merge_requests/1.diff",
-        "https://www.drupal.org/project/fastly/issues/3205426": "https://www.drupal.org/files/issues/2021-03-29/fastly-validate-credentials-3205426-6.patch"
-      }
-    },
+    "patches": {},
     "drupal-scaffold": {
       "file-mapping": {
         "[project-root]/drush/drush.yml": "assets/drush.yml",
