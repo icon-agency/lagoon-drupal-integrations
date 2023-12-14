@@ -21,7 +21,7 @@
     "drupal/lagoon_logs": "^2.1",
     "drupal/purge": "^3.4",
     "drupal/stage_file_proxy": "^2.0",
-    "drush/drush": "^11"
+    "drush/drush": "^12"
   },
   "autoload": {
     "psr-4": {
